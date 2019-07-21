@@ -1,8 +1,17 @@
 <div fxLayout="row">
   <div class="table" [fxFlex]="tableFlex">
-    <mat-list>
-      <mat-list-item (click)="toggle()">Item 1</mat-list-item>
-    </mat-list>
-  </div>
-  <div class="detail" [fxFlex]="detailFlex">Detail</div>
+      <table>
+          <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Phone</th> 
+          </tr>
+          <tr *ngFor="let patient of (patients$ | async)" (click)="toggle()">
+            <td>{{ patient.lname}}</td>
+            <td>{{ patient.fname }}</td>
+            <td>{{ patient.phoneContact }}</td> 
+          </tr>
+        </table>
+    </div>
+  <div class="detail" [fxFlex]="detailFlex" *ngIf="detailFlex">Detail</div>
 </div>

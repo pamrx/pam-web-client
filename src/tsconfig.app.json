@@ -7,5 +7,9 @@
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
+  ],
+  "include": [
+    "../src/**/*",
+    "../node_modules/json-typescript-mapper/libs/utils.ts"
   ]
 }
