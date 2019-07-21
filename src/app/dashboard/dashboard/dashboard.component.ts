@@ -30,4 +30,17 @@ export class DashboardComponent implements OnInit {
       this.detailFlex = 0;
     }
   }
+
+  public getColor(adherence: number): string {
+    if (!adherence) {
+      return;
+    }
+    if (adherence > 90) {
+      return 'accent';
+    } else if (adherence < 70) {
+      return 'warn';
+    } else {
+      return 'primary';
+    }
+  }
 }

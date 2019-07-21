@@ -16,6 +16,7 @@ export class Patient extends BaseModel<Patient> {
     ethnicity: string;
     prescriptions: Prescription[];
     notificationToken: string;
+    adherence: number;
 
     @JsonProperty('postal_code')
     postalCode: string;
@@ -44,6 +45,7 @@ export class Patient extends BaseModel<Patient> {
         this.postalCode = undefined;
         this.countryCode = undefined;
         this.phoneContact = undefined;
+        this.adherence = undefined;
         this.build(properties);
     }
 }
